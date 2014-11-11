@@ -17,14 +17,20 @@ couldn't guarantee that they'd work with the wireless -- and also I ran out of
 time.  Mostly time.  If I ever have to do this again I'm definitely setting that
 up.
 
+I cribbed the setupnetwork.ps1 from this superuser post
+http://superuser.com/questions/470319/how-to-enable-internet-connection-sharing-using-command-line
+as they had powershell installed
+
 Prerequisites
 =============
-The Pi should have already been configured to use link-local ipv4 addressing --
-this will all make sense in a jiffy.
+The Pi should have already been configured to use a static address in the
+192.168.137.-- range
 
 References
 ==========
 
+http://superuser.com/questions/470319/how-to-enable-internet-connection-sharing-using-command-line
+
 http://stackoverflow.com/questions/4619088/windows-batch-file-file-download-from-a-url
 http://ss64.com/nt/netsh.html
-
+https://anwaarullah.wordpress.com/2013/08/12/sharing-wifi-internet-connection-with-raspberry-pi-through-lanethernet-headless-mode/
