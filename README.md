@@ -26,6 +26,8 @@ Prerequisites
 The Pi should have already been configured to use a static address in the
 192.168.137.-- range
 
+This is in this repo
+
 References
 ==========
 
