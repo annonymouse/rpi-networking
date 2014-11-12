@@ -8,3 +8,6 @@ pip install twitter
 
 mv /etc/network/interfaces /etc/network/interfaces.old
 cp interface /etc/network/interfaces
+cp vncboot /etc/init.d/vncboot
+update-rc.d vncboot default
+

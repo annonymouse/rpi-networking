@@ -1,0 +1,32 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides: vncboot
+# Required-Start: $remote_fs $syslog
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 1 2 6
+# Short-Description: Start tightvnc server at boot
+# Description: Start the tightVNC server at boot
+### END INIT INFO
+
+USER=root
+HOME=/root
+#eval cd ~$USER
+
+export USER HOME
+
+case "$1" in
+	start)
+		echo "Starting VNC Server for $USER"
+		/usr/bin/tightvncserver :0
+		;;
+	stop)
+		echo "Stopping VNC Server"
+		pkill Xtightvnc
+		;;
+	*)
+		echo "Usage: /etc/init.d/vncboot {start|stop}"
+		exit 1
+		;;
+esac
+exit 0
