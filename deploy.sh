@@ -2,7 +2,7 @@
 
 set -e
 set -x
-apt-get install vim git nano screen tightvncserver 
+apt-get install -y vim git nano screen tightvncserver 
 easy_install pip
 pip install twitter
 
