@@ -21,18 +21,22 @@ I cribbed the setupnetwork.ps1 from this superuser post
 http://superuser.com/questions/470319/how-to-enable-internet-connection-sharing-using-command-line
 as they had powershell installed
 
+Fundamentally, I'm using internet sharing, and static IP's on the Pi.  In
+addition I install some things I needed like vnc.
 Prerequisites
 =============
 The Pi should have already been configured to use a static address in the
 192.168.137.-- range
 
-This is in this repo
+Use the deploy script as
+    sudo ./deploy.sh
+on the pi to configure it correctly.
 
 References
 ==========
 
+http://www.raspberrypi.org/documentation/remote-access/vnc/
 http://superuser.com/questions/470319/how-to-enable-internet-connection-sharing-using-command-line
-
 http://stackoverflow.com/questions/4619088/windows-batch-file-file-download-from-a-url
 http://ss64.com/nt/netsh.html
 https://anwaarullah.wordpress.com/2013/08/12/sharing-wifi-internet-connection-with-raspberry-pi-through-lanethernet-headless-mode/
