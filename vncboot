@@ -4,21 +4,21 @@
 # Required-Start: $remote_fs $syslog
 # Required-Stop: $remote_fs $syslog
 # Default-Start: 2 3 4 5
-# Default-Stop: 1 2 6
+# Default-Stop: 0 1 6
 # Short-Description: Start tightvnc server at boot
 # Description: Start the tightVNC server at boot
 ### END INIT INFO
 
-USER=root
-HOME=/root
-#eval cd ~$USER
+USER=pi
+HOME=/home/pi
+eval cd ~$USER
 
-export USER HOME
+#export USER HOME
 
 case "$1" in
 	start)
 		echo "Starting VNC Server for $USER"
-		/usr/bin/tightvncserver :0
+		su $USER -c '/usr/bin/tightvncserver :0'
 		;;
 	stop)
 		echo "Stopping VNC Server"

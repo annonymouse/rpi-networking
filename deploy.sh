@@ -13,6 +13,6 @@ update-rc.d vncboot defaults
 service vncboot start
 
 # Grab the scream file ahead of time, just in case....
-sudo -u pi mkdir -p ~/backup
-sudo -u pi wget http://goo.gl/MOXGX3 -O ~/backup/la.mp3 --no-check-certificate
-
+sudo -u pi mkdir -p /home/pi/backup
+sudo -u pi wget http://goo.gl/MOXGX3 -O /home/pi/backup/la.mp3 --no-check-certificate
+sudo -u pi cp nanorc /home/pi/.nanorc
